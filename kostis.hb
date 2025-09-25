@@ -14,15 +14,17 @@
   table{ border-collapse:collapse; }
   img{ display:block; border:0; outline:none; text-decoration:none; }
   a{ text-decoration:none; color:inherit; }
+  /* iOS Mail */
+  a[x-apple-data-detectors], u + #body a { color:inherit !important; text-decoration:none !important; font-size:inherit !important; font-family:inherit !important; font-weight:inherit !important; line-height:inherit !important; }
 
   /* Header layout helpers */
-  .header-logo { width:100px !important; }                 /* фикс под лого, чтобы меню не наезжало */
+  .header-logo { width:100px !important; }
   .header-menu { white-space:nowrap !important; padding-left:10px !important; }
 
   /* Desktop defaults */
   .wrapper { width:600px; max-width:600px; }
   .menu a { display:inline-block; font-weight:700; text-transform:uppercase; letter-spacing:.2px; font-size:14px; line-height:1; color:#111111 !important; padding:6px 8px; }
-  .cta { background:linear-gradient(90deg,#e50914,#b20710); color:#ffffff !important; padding:14px 32px; font-size:16px; font-weight:600; letter-spacing:.3px; border-radius:12px; display:inline-block; text-decoration:none; line-height:1; }
+  .cta-link { display:block; padding:14px 32px; font-size:16px; font-weight:600; letter-spacing:.3px; color:#ffffff !important; line-height:1; text-align:center; text-decoration:none; }
 
   /* ≤600px */
   @media only screen and (max-width:600px){
@@ -31,7 +33,7 @@
     .logo img { width:90px !important; height:auto !important; }
     .header-logo { width:92px !important; }
     .menu a { font-size:13px !important; padding:6px 6px !important; letter-spacing:.1px !important; }
-    .cta { padding:14px 24px !important; font-size:16px !important; }
+    .cta-link { padding:14px 24px !important; font-size:16px !important; }
     .fluid { width:100% !important; height:auto !important; max-width:600px !important; }
   }
 
@@ -41,7 +43,7 @@
     .header-logo { width:78px !important; }
     .header-menu { padding-left:6px !important; }
     .menu a { font-size:12px !important; padding:6px 4px !important; letter-spacing:0 !important; }
-    .cta { padding:12px 20px !important; font-size:15px !important; border-radius:10px !important; }
+    .cta-link { padding:12px 20px !important; font-size:15px !important; }
   }
 </style>
 <!--[if mso]>
@@ -49,16 +51,11 @@
   body, table, td, a { font-family: Arial, Helvetica, sans-serif !important; }
 </style>
 <![endif]-->
-<!--[if mso]><xml>
-<w:WordDocument xmlns:w="urn:schemas-microsoft-com:office:word">
-  <w:DontUseAdvancedTypographyReadingMail/>
-</w:WordDocument>
-</xml><![endif]-->
 </head>
-<body bgcolor="#f5f5f5" style="margin:0; padding:0;">
+<body id="body" bgcolor="#f5f5f5" style="margin:0; padding:0;">
 <!-- Preheader -->
 <div style="display:none;font-size:1px;line-height:1px;color:#ffffff;max-height:0;max-width:0;opacity:0;overflow:hidden;mso-hide:all;">
-Используйте промокод BDAY10 для праздничного заказа!
+Используйте промокод DR10 для праздничного заказа!
 </div>
 
 <!-- OUTER -->
@@ -67,7 +64,7 @@
     <td align="center" style="padding:20px 0;">
       <!-- WRAPPER -->
       <table role="presentation" class="wrapper" width="600" cellpadding="0" cellspacing="0" style="background:#ffffff; border:1px solid #e0e0e0; border-radius:8px; overflow:hidden;">
-        
+
         <!-- HEADER -->
         <tr>
           <td bgcolor="#ffffff" class="inner-pad" style="background:#ffffff !important; border-bottom:1px solid #eeeeee; padding:12px 20px;">
@@ -75,7 +72,8 @@
               <tr>
                 <!-- LOGO -->
                 <td class="logo header-logo" valign="middle" align="left" style="white-space:nowrap; width:100px;">
-                  <a href="https://kostis.ru" target="_blank" style="text-decoration:none;">
+                  <a href="https://kostis.ru/?source=crm&medium=email&campaign=promo_dr10&content=logo
+" target="_blank" style="text-decoration:none;">
                     <img src="https://retailcrm-stripo-prod.s3.eu-central-1.amazonaws.com/4d524f385afb47f2a27cfe3820c161d8/lib/pluginId_4d524f385afb47f2a27cfe3820c161d8_kostis/logo_kostis.png" alt="Kostis" width="90" height="auto" style="display:block;">
                   </a>
                 </td>
@@ -84,13 +82,20 @@
                   <table role="presentation" cellpadding="0" cellspacing="0" class="menu" align="right">
                     <tr>
                       <td align="center" valign="middle" style="padding-left:0;">
-                        <a href="https://kostis.ru/actions/" target="_blank"><span style="color:#111111 !important;">АКЦИИ</span></a>
+                        <a href="https://kostis.ru/actions/?source=crm&medium=email&campaign=promo_dr10&content=nav_akcii
+" target="_blank" style="font-weight:700 !important; text-decoration:none;">
+                          <span style="color:#111111 !important; font-weight:700 !important;"><strong>АКЦИИ</strong></span>
+                        </a>
                       </td>
                       <td align="center" valign="middle" style="padding-left:8px;">
-                        <a href="https://kostis.ru/vsjo_menju/" target="_blank"><span style="color:#111111 !important;">МЕНЮ</span></a>
+                        <a href="https://kostis.ru/vsjo_menju/?source=crm&medium=email&campaign=promo_dr10&content=nav_menu" target="_blank" style="font-weight:700 !important; text-decoration:none;">
+                          <span style="color:#111111 !important; font-weight:700 !important;"><strong>МЕНЮ</strong></span>
+                        </a>
                       </td>
                       <td align="center" valign="middle" style="padding-left:8px;">
-                        <a href="https://kostis.ru/catering/" target="_blank"><span style="color:#111111 !important;">КЕЙТЕРИНГ</span></a>
+                        <a href="https://kostis.ru/catering/?source=crm&medium=email&campaign=promo_dr10&content=nav_catering" target="_blank" style="font-weight:700 !important; text-decoration:none;">
+                          <span style="color:#111111 !important; font-weight:700 !important;"><strong>КЕЙТЕРИНГ</strong></span>
+                        </a>
                       </td>
                     </tr>
                   </table>
@@ -103,7 +108,7 @@
         <!-- BANNER -->
         <tr>
           <td align="center" bgcolor="#ffffff" style="background:#ffffff !important;">
-            <a href="https://kostis.ru" target="_blank">
+            <a href="https://kostis.ru/vsjo_menju/?source=crm&medium=email&campaign=promo_dr10&content=banner" target="_blank">
               <img class="fluid"
                    src="https://retailcrm-stripo-prod.s3.eu-central-1.amazonaws.com/4d524f385afb47f2a27cfe3820c161d8/lib/pluginId_4d524f385afb47f2a27cfe3820c161d8_kostis/kostis_hb.png"
                    alt="Офисная вечеринка с кейтерингом"
@@ -130,13 +135,41 @@
           </td>
         </tr>
 
-        <!-- CTA BUTTON (градиент) -->
-        <tr>
-          <td align="center" bgcolor="#ffffff" style="background:#ffffff !important; padding:6px 20px 20px 20px;">
-            <a href="https://kostis.ru/vsjo_menju/" target="_blank" class="cta">Заказать сейчас</a>
-          </td>
-        </tr>
-
+<!-- CTA BUTTON — bulletproof для Rambler/iOS -->
+<tr>
+  <td align="center" bgcolor="#ffffff" style="background:#ffffff !important; padding:6px 20px 20px 20px;">
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center">
+      <tr>
+        <td align="center"
+            bgcolor="#e50914"
+            style="
+              background:#e50914; 
+              background-image:linear-gradient(90deg,#e50914,#b20710);
+              border-radius:12px; -webkit-border-radius:12px; -moz-border-radius:12px;
+              text-align:center;
+              mso-padding-alt:14px 32px;
+            ">
+          <!--[if mso]>
+          <a href="https://kostis.ru/vsjo_menju/"
+             target="_blank"
+             style="display:inline-block; padding:14px 32px; font-size:16px; font-weight:600; letter-spacing:.3px; color:#ffffff; text-decoration:none; line-height:1; font-family: Arial, Helvetica, sans-serif;">
+            Заказать сейчас
+          </a>
+          <![endif]-->
+          <!--[if !mso]><!-- -->
+          <a href="https://kostis.ru/vsjo_menju/?source=crm&medium=email&campaign=promo_dr10&content=cta"
+             target="_blank"
+             style="display:inline-block; padding:14px 32px; font-size:16px; font-weight:600; letter-spacing:.3px;
+                    color:#ffffff !important; text-decoration:none !important; line-height:1;
+                    font-family: Arial, Helvetica, sans-serif;">
+            Заказать сейчас
+          </a>
+          <!--<![endif]-->
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
         <!-- TEXT -->
         <tr>
           <td align="center" bgcolor="#ffffff" style="background:#ffffff !important; padding:10px 20px 28px 20px;">
@@ -156,8 +189,8 @@
             </p>
             <p style="margin:6px 0; color:#ffffff !important;">
               <strong style="color:#ffffff !important;">Мы в соцсетях:</strong>
-              <a href="https://t.me/kostiscatering" style="color:#ffffff !important; text-decoration:underline;">Telegram</a> |
-              <a href="https://vk.com/kostis_ru" style="color:#ffffff !important; text-decoration:underline;">VK</a>
+              <a href="https://t.me/kostiscatering/?source=crm&medium=email&campaign=promo_dr10&content=footer_telegram" style="color:#ffffff !important; text-decoration:underline;">Telegram</a> |
+              <a href="https://vk.com/kostis_ru?source=crm&medium=email&campaign=promo_dr10&content=footer_vk" style="color:#ffffff !important; text-decoration:underline;">VK</a>
             </p>
             <p style="margin:6px 0; color:#ffffff !important;">
               Вы получили это письмо, потому что подписаны на рассылку Kostis.<br>
